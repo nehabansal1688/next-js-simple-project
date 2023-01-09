@@ -15,3 +15,5 @@ function App({Component,pageProps }) {
     );
 }
 you need not to include _app in any other file. next js will take care of that for you
+
+If you want to include something in page head then import Head from next/head
