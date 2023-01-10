@@ -37,3 +37,5 @@ export async function getStaticProps(){
     }
 };
 
+* next js generates ssg static site generation. next js uses getStaticProps to fetch api data and it will be converted to json and static html is generated.
+* we can use node js functionality in getStaticProp function as it runs on server
