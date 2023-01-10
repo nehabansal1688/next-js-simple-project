@@ -39,3 +39,21 @@ export async function getStaticProps(){
 
 * next js generates ssg static site generation. next js uses getStaticProps to fetch api data and it will be converted to json and static html is generated.
 * we can use node js functionality in getStaticProp function as it runs on server
+* data can be in marked down i.e. md file , one can install npm marked and __import marked from 'marked'__. use readfileto read md file and use __marked(file)__. it will retrun html but it will display html code n will not render it. use dangeriouslySetInnerHTML 
+
+==============================<br/>
+__Dynamic Routes__ <br/>
+=========================<br/>
+
+* if you want to use same page for multiple url params then page can be created like [page].js and you have to use __getStaticPath__.  
+* export async function getStaticPaths() {
+    return {
+        paths:[
+            {params: {   slug:'firstPost'}},
+           { params: {   slug:'secondPost'}}
+        ],
+        fallback:false
+    }
+} <br />
+* use fallback to show 404 not found if user is tryng to access param which is not listed in static path
+* 
