@@ -57,3 +57,10 @@ __Dynamic Routes__ <br/>
 } <br />
 * use fallback to show 404 not found if user is tryng to access param which is not listed in static path
 * 
+Next JS uses hydrate instead of reactdom.render. html pages contains buttons, input boxes etc from server and after using hydrate it attached event handling to those buttons.
+
+__hydration attaches clinet side functionality of app to the page__
+
+if you want to use localstorage in next js, server dnt recognize that. you will have to use typeOf localStorage. and you can supressHydrationWarning using this attribute in tag
+
+
