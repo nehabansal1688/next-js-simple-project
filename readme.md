@@ -63,4 +63,11 @@ __hydration attaches clinet side functionality of app to the page__
 
 if you want to use localstorage in next js, server dnt recognize that. you will have to use typeOf localStorage. and you can supressHydrationWarning using this attribute in tag
 
+# Headless CMS - content management system. - cms without UI
+it provides web api
+* Strapi - headless cms
+* it lets you create user base for authentication and you can create collection with all the fields and specify field types
+* it exposes rest api for you to access data
+
+
 
