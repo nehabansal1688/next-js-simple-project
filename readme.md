@@ -69,5 +69,17 @@ it provides web api
 * it lets you create user base for authentication and you can create collection with all the fields and specify field types
 * it exposes rest api for you to access data
 
+# getStaticProps
+pro - data is fetched ar server at build time and data is included in the static page. page is loaded quickly too and seo optimized too.
+cons- if data is refreshed in DB then it wnt be updated in UI
 
+# inceremtal static regenration
+when page is rendered in server side using **getStaticProps** then page wnt update automaticallly if data changes in database. 
+for impementing ISR we just need to add revalidate: 30(time in sec) along with the return value of getStaticProps. data will be refreshed in server after every 30 seconds
 
+# getServerSideProps
+data is reloaded on page load so if many calls are made to backed then it takes some time to fetch reposne for all the calls
+there is no diff between getServerSide props and getStatic props in dev mode as both will be reloaded on page load
+
+# API routes
+to create api end point we can create api folder inside pages. any file inside pages->api->products.js will be treated as api endpoint and can be used to fetch the data. file containes handler which taken req and res as parameter and returns res.success(200).json([data]);
